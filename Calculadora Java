@@ -1,0 +1,89 @@
+
+import java.util.Scanner;
+
+public class Calculadora {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n1;
+        int n2;
+        // // // // // // // // //
+        int som;
+        int sub;
+        int div;
+        int mul;
+        int opc;
+        int rep;
+
+        System.out.print("Digite uma opção abaixo ↓\n  ");
+
+        do {
+            System.out.println("\n1: Soma");
+            System.out.println("2: Subtração");
+            System.out.println("3: Divisão");
+            System.out.println("4: Multiplicação");
+            System.out.print("Opção: ");
+            opc = scan.nextInt();
+
+
+
+            switch (opc){
+                case 1:
+                    System.out.println("Digite dois numero para somar");
+                    System.out.print("Numero 1:  ");
+                    n1 = scan.nextInt();
+
+                    System.out.print("Numero 2:  ");
+                    n2 = scan.nextInt();
+
+                    som = n1 + n2;
+
+                    System.out.println("Respota:  "+som);
+                    break;
+                case 2:
+                    System.out.println("Digite dois numero para subtrair↓");
+                    System.out.print("Numero 1:  ");
+                    n1 = scan.nextInt();
+
+                    System.out.print("Numero 2:  ");
+                    n2 = scan.nextInt();
+
+                    sub = n1 - n2;
+                    System.out.println("Resposta:  "+sub);
+                    break;
+                case 3:
+                    System.out.println("Digite 2 numeros para dividir");
+                    System.out.println("Numero 1:  ");
+                    n1 = scan.nextInt();
+                    System.out.println("Numero 2:  ");
+                    n2 = scan.nextInt();
+
+                    div = (n1 / n2);
+                    System.out.println("Resposta:  "+div);
+                    break;
+                case 4:
+                    System.out.println("Digite dois numeros para multiplicar");
+                    System.out.println("Numero 1:  ");
+                    n1 = scan.nextInt();
+
+                    System.out.println("Numero 2:  ");
+                    n2 = scan.nextInt();
+                    mul = (n1 * n2);
+                    System.out.println("Resposta:  "+mul);
+                    break;
+                default:
+                    System.out.println("Opção invalida");
+                    break;
+
+
+            }
+
+            System.out.println("Deseja repetir? 1 -> SIM  / 0 -> NÃO");
+            rep = scan.nextInt();
+
+        } while (rep == 1);
+        System.out.println("Programa finalizado. ");
+        scan.close();
+
+
+    }
+}
